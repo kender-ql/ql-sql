@@ -1,0 +1,49 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'maven'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.ql'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+buildscript {
+    repositories {
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven{ url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.4.0")
+    }
+}
+
+allprojects {
+    repositories {
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+        maven{ url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    compile 'com.spring4all:swagger-spring-boot-starter:1.9.1.RELEASE'
+    compile 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.3'
+    //    分页
+    compile 'com.github.pagehelper:pagehelper:5.2.0'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.4.0'
+    compile 'com.alibaba:fastjson:1.2.7'
+    runtimeOnly 'mysql:mysql-connector-java:8.0.21'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+//不添加这个配置，sample无法正常引用
+jar.enabled=true
