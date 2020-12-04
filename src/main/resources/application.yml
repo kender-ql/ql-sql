@@ -1,1 +1,28 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ql-sample?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT
+    username: root
+    password: 123456
+#  datasource:
+#    url: jdbc:h2:file:D:/h2/datasource/example
+#    username: root
+#    password: 123456
+
+#pageHelper配置（官网推荐配置）
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+  returnPageInfo: check
+
+#mybatis的配置
+mybatis:
+  type-aliases-package: com.ql.qlsql.mybatis.entity
+  mapper-locations: classpath:mapping/*.xml
 

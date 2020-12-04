@@ -1,3 +1,3 @@
 # ql-sql
-1. jpa，mybatis
-2. h2，mysql
+1. 包含jpa，mybatis
+2. 支持数据库：h2，mysql
