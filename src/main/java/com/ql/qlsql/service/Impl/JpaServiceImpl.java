@@ -16,7 +16,7 @@ import java.util.Map;
 @Service
 public class JpaServiceImpl implements JpaService {
 
-//    @Autowired
+    @Autowired
     private JpaAdminRepository jpaAdminRepository;
 
     @Override
