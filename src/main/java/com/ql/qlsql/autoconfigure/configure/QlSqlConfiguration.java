@@ -20,7 +20,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
         "com.ql.qlsql.mybatis.dao"
 })
 @EnableJpaRepositories(basePackages = {
-        "com.ql.qlsql.jpa.daoa"
+        "com.ql.qlsql.jpa.dao"
 })
 @EntityScan(basePackages = {
         "com.ql.qlsql.jpa.entity"
