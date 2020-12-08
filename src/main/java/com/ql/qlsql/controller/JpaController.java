@@ -2,6 +2,7 @@ package com.ql.qlsql.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.ql.qlsql.service.JpaService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,8 +15,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @Version 1.0.0 RELEASE
  * @Date 2020/12/4 15:51
  */
+@Api(value = "Jpa连接示例的控制层")
 @Controller
-@RequestMapping("/jpa/mybatis")
+@RequestMapping("/jpa/admin")
 public class JpaController {
     @Autowired
     private JpaService jpaService;

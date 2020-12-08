@@ -58,10 +58,4 @@ public class Admin implements Serializable {
                 ", password='" + password + '\'' +
                 '}';
     }
-
-    public Admin(Integer id, @NotNull String userName, @NotNull String password) {
-        this.id = id;
-        this.userName = userName;
-        this.password = password;
-    }
 }

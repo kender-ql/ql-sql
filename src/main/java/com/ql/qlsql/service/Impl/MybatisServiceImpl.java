@@ -22,10 +22,10 @@ public class MybatisServiceImpl implements MybatisService {
 
     @Override
     public User login(JSONObject params) {
-        Object name = params.get("username");
+        Object username = params.get("username");
         Object password = params.get("password");
-        if (name != null&& password != null) {
-            return userDao.login(name.toString(), password.toString());
+        if (username != null&& password != null) {
+            return userDao.login(username.toString(), password.toString());
         }
         return null;
     }

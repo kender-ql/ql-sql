@@ -1,7 +1,6 @@
 package com.ql.qlsql.service.Impl;
 
 import com.ql.qlsql.jpa.dao.AdminRepository;
-import com.ql.qlsql.jpa.dao.impl.JpaAdminRepository;
 import com.ql.qlsql.jpa.entity.Admin;
 import com.ql.qlsql.service.JpaService;
 import org.springframework.beans.factory.annotation.Autowired;
