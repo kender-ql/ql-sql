@@ -3,6 +3,7 @@ package com.ql.qlsql.controller;
 import com.alibaba.fastjson.JSONObject;
 import com.ql.qlsql.service.JpaService;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,6 +23,7 @@ public class JpaController {
     @Autowired
     private JpaService jpaService;
 
+    @ApiOperation(value = "实现管理员登录", notes = "实现管理员登录")
     @ResponseBody
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public JSONObject login(@RequestBody JSONObject params){

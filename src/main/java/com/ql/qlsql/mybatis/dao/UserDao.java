@@ -14,7 +14,9 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserDao {
 
-    public PageInfo<User> findAll();
+    PageInfo<User> findAll();
 
-    public User login(@Param("userName")String name, @Param("password")String password);
+    User login(@Param("userName") String name, @Param("password") String password);
+
+    void save(User user);
 }

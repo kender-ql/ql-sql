@@ -15,5 +15,5 @@ import java.lang.annotation.*;
 @Target(value = ElementType.TYPE)
 @Documented
 @Import({QlSqlConfiguration.class})
-public @interface EnableQlSql {
+public @interface EnableQlSqlModule {
 }

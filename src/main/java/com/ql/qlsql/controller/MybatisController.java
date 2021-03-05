@@ -21,7 +21,7 @@ public class MybatisController {
     @Autowired
     private MybatisService mybatisService;
 
-    @ApiOperation(value = "实现用户登录")
+    @ApiOperation(value = "实现用户登录", notes = "实现用户登录")
     @ResponseBody
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public JSONObject login(@RequestBody JSONObject params){
