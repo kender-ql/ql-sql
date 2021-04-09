@@ -10,4 +10,8 @@
     <select id="login" resultType="com.ql.qlsql.mybatis.entity.User">
         select * from ql_user where userName=#{userName} and password=#{password}
     </select>
+
+    <insert id="save" useGeneratedKeys="true" keyColumn="id" keyProperty="id" parameterType="com.ql.qlsql.mybatis.entity.User">
+        insert into ql_user (username, password) values (#{userName}, #{password})
+    </insert>
 </mapper>

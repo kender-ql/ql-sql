@@ -1,7 +1,6 @@
 package com.ql.qlsql.jpa.dao;
 
 import com.ql.qlsql.jpa.entity.Admin;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
